@@ -1,8 +1,7 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-@import "bootstrap/dist/css/bootstrap.min.css";
-@import "bootstrap/dist/js/bootstrap.bundle.min";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --background: #ffffff;
   --foreground: #000000;

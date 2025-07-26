@@ -7,9 +7,12 @@ import ExpertCard from "@/components/expertCard";
 import AboutComponent from "@/components/about";
 import ServicesComponent from "@/components/services";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+import { useEffect } from "react";
 
 export default function Dashboard() {
+  useEffect(() => {
+    import("bootstrap/dist/js/bootstrap.bundle.min.js");
+  }, []);
   return (
     <>
       <HeaderComponent />
