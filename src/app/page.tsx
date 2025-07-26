@@ -1,11 +1,12 @@
 "use client";
-import BannerComponent from "@/components/banner";
-import HeaderComponent from "@/components/header";
 import Founder1 from "@/media/person1.jpeg";
 import Founder2 from "@/media/person2.jpeg";
+import HeaderComponent from "@/components/header";
+import BannerComponent from "@/components/banner";
 import ExpertCard from "@/components/expertCard";
 import AboutComponent from "@/components/about";
 import ServicesComponent from "@/components/services";
+
 import "./globals.css";
 
 export default function Dashboard() {
