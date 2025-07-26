@@ -1,0 +1,17 @@
+[
+  {
+    "name": "CA Poorna",
+    "bio": "Founder & audit specialist with 10 + years in assurance and compliance.",
+    "image": "/media/person1.webp"
+  },
+  {
+    "name": "CA Shivamurthy Hegde",
+    "bio": "Direct-tax strategist focusing on startups and cross-border transactions.",
+    "image": "/media/person2.webp"
+  },
+  {
+    "name": "CA Gokul",
+    "bio": "Indirect-tax and GST lead, known for automating compliance workflows.",
+    "image": "/media/person3.webp"
+  }
+]

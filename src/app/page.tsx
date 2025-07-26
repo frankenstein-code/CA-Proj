@@ -1,103 +1,108 @@
-import Image from "next/image";
+"use client";
+import BannerComponent from "@/components/banner";
+import HeaderComponent from "@/components/header";
+import Founder1 from "@/media/person1.jpeg";
+import Founder2 from "@/media/person2.jpeg";
+import ExpertCard from "@/components/expertCard";
+import AboutComponent from "@/components/about";
+import ServicesComponent from "@/components/services";
+import "./globals.css";
 
-export default function Home() {
+export default function Dashboard() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <HeaderComponent />
+      <BannerComponent />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Content */}
+      <div className="container">
+        <div className="text-center fs-4 p-5">
+          <p>
+            In today’s dynamic global marketplace, marked by rapid growth,
+            consolidation, and constant change, businesses face a wide array of
+            evolving challenges. At Karthik M & Associates, we help our clients
+            navigate these complexities and seize new opportunities by
+            delivering reliable and timely professional services, wherever and
+            whenever they are needed. Our firm offers a comprehensive suite of
+            services, tailored to meet the unique needs of each client.
+            <br></br>
+            <br></br>
+            These include Statutory Audits for companies, Internal Audits for
+            corporates, consultancy and representation in Income Tax and Goods &
+            Services Tax matters, as well as Financial Advisory services. By
+            leveraging a strong network of experienced professionals, strategic
+            partners, and advanced technologies, Karthik M & Associates delivers
+            solutions that are not only compliant but also informed by deep
+            industry insights and best practices.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      </div>
+
+      <div
+        style={{
+          width: "30em",
+          display: "block",
+          height: "3px",
+          backgroundColor: "#030303",
+          margin: "30px auto 30px",
+        }}
+      ></div>
+
+      {/* Experts */}
+      <div className="container py-4" id="expert">
+        <div id="Experts">
+          {/* <h4 style={{ color: "#547792" }}>Our Experts</h4> */}
+          <h1 style={{ color: "#213448" }}>Our Founder</h1>
+          <div
+            style={{
+              width: "10em",
+              height: "3px",
+              backgroundColor: "#030303",
+              margin: "30px 0",
+            }}
+          ></div>
+          <ExpertCard
+            name="CA Karthik M"
+            designation="ACA"
+            bio="Mr. Karthik M, the Founder and Managing Partner of the firm, is a Chartered Accountant by profession. He began his career as a trainee at M/s. N N Yuvaraj & Associates, Bangalore, where he gained valuable experience in financial audits, direct taxation, and corporate law matters.
+              In 2018, he co-founded Aditya Karthik & Udupa, Chartered Accountants, where he specialized in statutory audits and direct tax advisory. During this time, he successfully led a team in centralizing Tax Deducted at Source (TDS) compliance for a Public Sector Undertaking (PSU) with over 2,200 branches.
+              In 2020, he established Karthik M & Associates, with a vision to provide customized audit, taxation, and financial advisory services to a diverse range of corporate clients across various industries.
+              "
+            image={Founder1}
+            imagePosition="left"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+
+          <ExpertCard
+            name="CA Ramya Sravanthi D"
+            designation="ACA"
+            bio="Mrs. Ramya Sravanthi D is a qualified Chartered Accountant and a Company Secretary, since 2016. She began her career as an Assistant Company Secretary at HM Constructions and subsequently joined Ernst & Young (Global Delivery Services) as a Senior Associate. From 2018 to 2022, she served as a Senior Executive – Secretarial Compliance and Taxation at M/s. Micromatic Machine Tools Private Limited, where she gained extensive experience in corporate governance and regulatory compliance.
+                Since 2022 she has been associated with M/s. Karthik M & Associates, and has led the firm’s Secretarial and Legal Compliance division, playing a key role in delivering high-quality solutions to clients across various sectors."
+            image={Founder2}
+            imagePosition="right"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </div>
+
+      <div
+        style={{
+          width: "30em",
+          display: "block",
+          height: "3px",
+          backgroundColor: "#030303",
+          margin: "30px auto 30px",
+        }}
+      ></div>
+
+      {/* Services */}
+      <ServicesComponent />
+
+      {/* A Little About Us.. */}
+      <AboutComponent />
+
+      {/* <div className="container">
+        <h4>Our Edge</h4>
+        <h1>What Sets Us Apart?</h1>
+      </div> */}
+    </>
   );
 }
