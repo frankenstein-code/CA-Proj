@@ -9,8 +9,6 @@ import ServicesComponent from "@/components/services";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-import "./globals.css";
-
 export default function Dashboard() {
   return (
     <>
