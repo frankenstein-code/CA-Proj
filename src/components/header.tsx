@@ -1,7 +1,5 @@
 "use client";
 import Image from "next/image";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
 import CAIndiaLogo from "@/media/CAIndiaLogo.png";
 
 export default function HeaderComponent() {
